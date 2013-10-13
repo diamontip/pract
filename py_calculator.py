@@ -8,19 +8,35 @@ ToDo:
 5. Multiplication - completed
 6. Division - completed
 7. Age calculator - completed
-8. Age difference
-9. area of a triangle 
+8. Age difference - completed
+9. area of a triangle - completed
 10. hours left from now
 11. days left from today
 12. temperature calculator
+
+blog: 
+how to get current date and time in python
+how to get current date and time in ruby
+how to get current date and time in javascript
+find time left(difference) between two time values in python
+find time left(difference) between two time values in ruby
+
 
 '''
 
 
 import math
+import datetime
 from datetime import date 
 
+
 current_year = date.today().year
+
+t1 = datetime.strftime('01:12','%H:%M')
+t2 = datetime.strftime('18:59','%H:%M')
+print t1
+print t2 - t1
+
 
 def simple(capital, rate, time):
   return capital * (1 + (rate * time))
@@ -42,9 +58,20 @@ def divide(num1, num2):
  
 def age_cal(year1,current_year):
   return (current_year-year1)
- 
   
-print "------------%d----------" %date.today().year  
+def age_diff(year1, year2):
+  return (year1 - year2)
+  
+def area_triangle(base,length):
+  return ((base*length)/2)
+
+
+
+
+
+
+print "------------%d----------" %date.today().year 
+
 print "1) Simple Interest"
 print "2) Compound interest"
 print "3) Addition"
@@ -52,6 +79,8 @@ print "4) Subtraction"
 print "5) Multiplication"
 print "6) Divide"
 print "7) Age Calculator"
+print "8) Age Difference"
+print "9) Area of a triangle"
 
 selection = raw_input("> ").lower()
 
@@ -69,21 +98,4 @@ elif selection in ['3', 'addition']:
 	num1 = float(raw_input("first number: "))
 	num2 = float(raw_input("second number: "))
 	print addition(num1,num2)
-elif selection in ['4', 'subtraction']:
-	num1 = float(raw_input("first number: "))
-	num2 = float(raw_input("second number: "))
-	print subtract(num1,num2)
-elif selection in ['5','multiplication']:
-	num1 = float(raw_input("first number: "))	
-	num2 = float(raw_input("second number: "))
-	print multiplication(num1,num2)
-elif selection in ['6', 'divide']:
-	num1 = float(raw_input("first number: "))	
-	num2 = float(raw_input("second number: "))
-	print divide(num1,num2)
-elif selection in ['7', 'age calculator']:
-	year1 = int(raw_input("Year of birth: "))
-	print age_cal(year1,current_year)
-	
-else:
-  print "You didn't choose a valid interest type"
+elif 
