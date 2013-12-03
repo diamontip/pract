@@ -20,6 +20,7 @@ how to get current date and time in ruby
 how to get current date and time in javascript
 find time left(difference) between two time values in python
 find time left(difference) between two time values in ruby
+how to generate calendar in python
 
 
 '''
@@ -32,10 +33,10 @@ from datetime import date
 
 current_year = date.today().year
 
-t1 = datetime.strftime('01:12','%H:%M')
-t2 = datetime.strftime('18:59','%H:%M')
-print t1
-print t2 - t1
+# t1 = datetime.strftime('01:12','%H:%M')
+# t2 = datetime.strftime('18:59','%H:%M')
+# print t1
+# print t2 - t1
 
 
 def simple(capital, rate, time):
@@ -64,6 +65,7 @@ def age_diff(year1, year2):
   
 def area_triangle(base,length):
   return ((base*length)/2)
+  
 
 
 
@@ -98,4 +100,31 @@ elif selection in ['3', 'addition']:
 	num1 = float(raw_input("first number: "))
 	num2 = float(raw_input("second number: "))
 	print addition(num1,num2)
-elif 
+elif selection in ['4', 'subtraction']:
+	num1 = float(raw_input("first number: "))
+	num2 = float(raw_input("second number: "))
+	print subtract(num1,num2)
+elif selection in ['5','multiplication']:
+	num1 = float(raw_input("first number: "))	
+	num2 = float(raw_input("second number: "))
+	print multiplication(num1,num2)
+elif selection in ['6', 'divide']:
+	num1 = float(raw_input("first number: "))	
+	num2 = float(raw_input("second number: "))
+	print divide(num1,num2)
+elif selection in ['7', 'age calculator']:
+	year1 = int(raw_input("Year of birth: "))
+	print age_cal(year1,current_year)
+elif selection in ['8', 'age difference']:
+	year1 = int(raw_input("First Year of birth: "))
+	year2 = int(raw_input("Second Year of birth: "))
+	print age_diff(year1, year2)
+elif selection in ['9','area of a triangle','triangle']:
+	base = float(raw_input("enter the base length: "))
+	length = float(raw_input("enter the height: "))
+	print area_triangle(base, length)
+	
+
+
+else:
+  print "You didn't choose a valid option"
