@@ -13,16 +13,6 @@ ToDo:
 10. hours left from now
 11. days left from today
 12. temperature calculator
-
-blog: 
-how to get current date and time in python
-how to get current date and time in ruby
-how to get current date and time in javascript
-find time left(difference) between two time values in python
-find time left(difference) between two time values in ruby
-how to generate calendar in python
-
-
 '''
 
 
